@@ -1,0 +1,469 @@
+{
+  "description": {
+    "title": "Data recorded in the different houses",
+    "long_description": "Numbers in column '#' refer to those in Figure 1, here we use 'id'. 'Sensor Name' gives the name of quantity measured by the corresponding sensor, here we use 'sensor_name'. 'Torig' indicates the original sampling rate, here we use 'sampling_rate'. 'M-id' lists the meter identity as given in Table 5, here we use 'meter_id'. Abbreviations: 'pc' stands for 'power consumption', 'PV' for 'photovoltaic', 'ed' for 'event driven'.",
+    "parameters": {
+      "id": "number of the sensor as illustrated in Figure 1",
+      "sampling_rate": "original sampling rate of the sensor",
+      "meter_id": "meter identity as given in Table 5",
+      "Sensor Name": "name of the sensor as used in the data",
+      "Unit": "unit of the sensor measurement"
+    },
+    "abbreviations": {
+      "pc": "power consumption",
+      "PV": "photovoltaic",
+      "ed": "event driven"
+    }
+  },
+  "houses": {
+    "House_A": [
+      {
+        "id": 1,
+        "description": "total pc",
+        "sensor_name": "A_total_cons_power",
+        "unit": "W",
+        "sampling_rate": "120 s",
+        "meter_id": "a"
+      },
+      {
+        "id": 2,
+        "description": "pc of dishwasher",
+        "sensor_name": "A_dishwasher_power",
+        "unit": "W",
+        "sampling_rate": "120 s",
+        "meter_id": "b"
+      },
+      {
+        "id": 3,
+        "description": "pc of cooking, backing",
+        "sensor_name": "A_stove_power",
+        "unit": "W",
+        "sampling_rate": "120 s",
+        "meter_id": "c"
+      },
+      {
+        "id": 4,
+        "description": "PV power production",
+        "sensor_name": "A_exp_power",
+        "unit": "W",
+        "sampling_rate": "120 s",
+        "meter_id": ["d", "e"],
+        "notes": "Meter d was replaced with e on 2018-4-16"
+      },
+      {
+        "id": 5,
+        "description": "pc of heat pump",
+        "sensor_name": "A_hp_power",
+        "unit": "W",
+        "sampling_rate": "120 s",
+        "meter_id": "f"
+      },
+      {
+        "id": 6,
+        "description": "pc of several devices: sauna, steam shower, outdoor lighting",
+        "sensor_name": "A_sauna_power",
+        "unit": "W",
+        "sampling_rate": "120 s",
+        "meter_id": "c"
+      },
+      {
+        "id": 7,
+        "description": "pc of several devices: fridge, comfort ventilation, central vacuum cleaner",
+        "sensor_name": "A_additional_power",
+        "unit": "W",
+        "sampling_rate": "120 s",
+        "meter_id": "b"
+      },
+      {
+        "id": 8,
+        "description": "pc of washing machine",
+        "sensor_name": "A_washing_machine_power",
+        "unit": "W",
+        "sampling_rate": "120 s",
+        "meter_id": "f"
+      }
+    ],
+    "House_B": [
+      {
+        "id": 1,
+        "description": "total pc",
+        "sensor_name": "B_total_cons_power",
+        "unit": "W",
+        "sampling_rate": "300 s",
+        "meter_id": "g"
+      },
+      {
+        "id": 2,
+        "description": "pc of boiler",
+        "sensor_name": "B_boiler_power",
+        "unit": "W",
+        "sampling_rate": "300 s",
+        "meter_id": "h"
+      },
+      {
+        "id": 3,
+        "description": "water boiler: temp. at the top",
+        "sensor_name": "B_boilertemp_top",
+        "unit": "°C",
+        "sampling_rate": "300 s",
+        "meter_id": "i"
+      },
+      {
+        "id": 4,
+        "description": "water boiler: temp. at the bottom",
+        "sensor_name": "B_boilertemp_bottom",
+        "unit": "°C",
+        "sampling_rate": "300 s",
+        "meter_id": "i"
+      },
+      {
+        "id": 5,
+        "description": "water boiler: on/off-status of heater 1, 2, 3 and thermostat",
+        "sensor_name": ["B_boiler_heater_*", "B_boiler_on_thermostat"],
+        "unit": "–",
+        "sampling_rate": "300 s (event driven)",
+        "meter_id": "j"
+      },
+      {
+        "id": 6,
+        "description": "total PV power production",
+        "sensor_name": "B_pv_prod_power",
+        "unit": "W",
+        "sampling_rate": "300 s",
+        "meter_id": "g"
+      },
+      {
+        "id": 7,
+        "description": "from solar panel to battery",
+        "sensor_name": "B_to_batt_power",
+        "unit": "W",
+        "sampling_rate": "300 s",
+        "meter_id": "g"
+      },
+      {
+        "id": 8,
+        "description": "pc from solar panel directly",
+        "sensor_name": "B_direct_cons_power",
+        "unit": "W",
+        "sampling_rate": "300 s",
+        "meter_id": "g"
+      },
+      {
+        "id": 9,
+        "description": "battery charge state (100% = full)",
+        "sensor_name": "B_batt_state",
+        "unit": "%",
+        "sampling_rate": "300 s",
+        "meter_id": "g"
+      },
+      {
+        "id": 10,
+        "description": "pc from battery",
+        "sensor_name": "B_from_batt_power",
+        "unit": "W",
+        "sampling_rate": "300 s",
+        "meter_id": "g"
+      },
+      {
+        "id": 11,
+        "description": "from solar panel in grid",
+        "sensor_name": "B_to_net_power",
+        "unit": "W",
+        "sampling_rate": "300 s",
+        "meter_id": "g"
+      },
+      {
+        "id": 12,
+        "description": "pc from grid",
+        "sensor_name": "B_from_net_power",
+        "unit": "W",
+        "sampling_rate": "300 s",
+        "meter_id": "g"
+      }
+    ],
+    "House_C": [
+      {
+        "id": 1,
+        "description": "total pc",
+        "sensor_name": "C_total_cons_power",
+        "unit": "W",
+        "sampling_rate": ["120 s", "300 s"],
+        "meter_id": ["a", "g"],
+        "notes": "Meter a (120 s) removed on 2017-09-26. Meter g (300 s) installed on 2017-11-01"
+      },
+      {
+        "id": 2,
+        "description": "pc of boiler",
+        "sensor_name": "C_boiler_power",
+        "unit": "W",
+        "sampling_rate": "300 s",
+        "meter_id": "h"
+      },
+      {
+        "id": 3,
+        "description": "water boiler: temp. at the top",
+        "sensor_name": "C_boilertemp_top",
+        "unit": "°C",
+        "sampling_rate": "300 s",
+        "meter_id": "i"
+      },
+      {
+        "id": 4,
+        "description": "water boiler: temp. at the bottom",
+        "sensor_name": "C_boilertemp_bottom",
+        "unit": "°C",
+        "sampling_rate": "300 s",
+        "meter_id": "i"
+      },
+      {
+        "id": 5,
+        "description": "water boiler: on/off-status of heater 1, 2, 3, thermostat, relay, utility",
+        "sensor_name": ["C_boiler_heater_*", "C_boiler_on_*"],
+        "unit": "–",
+        "sampling_rate": "300 s (event driven)",
+        "meter_id": "j"
+      },
+      {
+        "id": 6,
+        "description": "total PV power production",
+        "sensor_name": "C_pv_prod_power",
+        "unit": "W",
+        "sampling_rate": "300 s",
+        "meter_id": "g"
+      },
+      {
+        "id": 7,
+        "description": "from solar panel to battery",
+        "sensor_name": "C_to_batt_power",
+        "unit": "W",
+        "sampling_rate": "300 s",
+        "meter_id": "g"
+      },
+      {
+        "id": 8,
+        "description": "pc from solar panel directly",
+        "sensor_name": "C_direct_cons_power",
+        "unit": "W",
+        "sampling_rate": "300 s",
+        "meter_id": "g"
+      },
+      {
+        "id": 9,
+        "description": "battery charging state (100% = full)",
+        "sensor_name": "C_batt_state",
+        "unit": "%",
+        "sampling_rate": "300 s",
+        "meter_id": "g"
+      },
+      {
+        "id": 10,
+        "description": "pc from battery",
+        "sensor_name": "C_from_batt_power",
+        "unit": "W",
+        "sampling_rate": "300 s",
+        "meter_id": "g"
+      },
+      {
+        "id": 11,
+        "description": "from solar panel in grid",
+        "sensor_name": "C_to_net_power",
+        "unit": "W",
+        "sampling_rate": "300 s",
+        "meter_id": "g"
+      },
+      {
+        "id": 12,
+        "description": "pc from grid",
+        "sensor_name": "C_from_net_power",
+        "unit": "W",
+        "sampling_rate": "300 s",
+        "meter_id": "g"
+      },
+      {
+        "id": "12b",
+        "description": "metering of solar radiation",
+        "sensor_name": "C_solarlog_radiation",
+        "unit": "W/m²",
+        "sampling_rate": "120 s",
+        "meter_id": "k"
+      },
+      {
+        "id": 13,
+        "description": "environmental data logged by weather station, see Table 3",
+        "sensor_name": "C_weather_*",
+        "unit": "*",
+        "sampling_rate": "1 h",
+        "meter_id": "l"
+      },
+      {
+        "id": 14,
+        "description": "pc of heat pump",
+        "sensor_name": "C_hp_power",
+        "unit": "W",
+        "sampling_rate": "120 s",
+        "meter_id": "a"
+      },
+      {
+        "id": "14b",
+        "description": "ripple control signal for heat pump",
+        "sensor_name": "C_hp_on_utility",
+        "unit": "–",
+        "sampling_rate": "event driven",
+        "meter_id": "m"
+      },
+      {
+        "id": 15,
+        "description": "outdoor temperature next to sensor of heat pump",
+        "sensor_name": "C_temperature_out",
+        "unit": "°C",
+        "sampling_rate": "120 s",
+        "meter_id": "i"
+      }
+    ],
+    "House_D": [
+      {
+        "id": 1,
+        "description": "total pc",
+        "sensor_name": "D_total_cons_power",
+        "unit": "W",
+        "sampling_rate": "120 s",
+        "meter_id": "a"
+      },
+      {
+        "id": 2,
+        "description": "pc of dishwasher",
+        "sensor_name": "D_dishwasher_power",
+        "unit": "W",
+        "sampling_rate": "60 s",
+        "meter_id": "n"
+      },
+      {
+        "id": 3,
+        "description": "pc of tumble dryer",
+        "sensor_name": "D_tumble_dryer_power",
+        "unit": "W",
+        "sampling_rate": "60 s",
+        "meter_id": "n"
+      },
+      {
+        "id": 4,
+        "description": "PV power production",
+        "sensor_name": "D_exp_power",
+        "unit": "W",
+        "sampling_rate": "120 s",
+        "meter_id": "d"
+      },
+      {
+        "id": 5,
+        "description": "pc of heat pump",
+        "sensor_name": "D_hp_power",
+        "unit": "W",
+        "sampling_rate": "300 s",
+        "meter_id": "o"
+      },
+      {
+        "id": 6,
+        "description": "pc of rainwater pump",
+        "sensor_name": "D_rainwater_power",
+        "unit": "W",
+        "sampling_rate": "60 s",
+        "meter_id": "n"
+      },
+      {
+        "id": 7,
+        "description": "pc of HiFi system and router",
+        "sensor_name": "D_audio_wlan_og_power",
+        "unit": "W",
+        "sampling_rate": "60 s",
+        "meter_id": "n"
+      },
+      {
+        "id": 8,
+        "description": "pc of washing machine",
+        "sensor_name": "D_washing_machine_power",
+        "unit": "W",
+        "sampling_rate": "60 s",
+        "meter_id": "n"
+      }
+    ],
+    "House_E": [
+      {
+        "id": 1,
+        "description": "total pc",
+        "sensor_name": "E_total_cons_power",
+        "unit": "W",
+        "sampling_rate": "300 s",
+        "meter_id": "p"
+      },
+      {
+        "id": 2,
+        "description": "pc of dishwasher",
+        "sensor_name": "E_dishwasher_power",
+        "unit": "W",
+        "sampling_rate": "60 s",
+        "meter_id": "n"
+      },
+      {
+        "id": 3,
+        "description": "pc of tumble dryer",
+        "sensor_name": "E_tumble_dryer_power",
+        "unit": "W",
+        "sampling_rate": "60 s",
+        "meter_id": "n"
+      },
+      {
+        "id": 4,
+        "description": "PV power production",
+        "sensor_name": "E_prod_power",
+        "unit": "W",
+        "sampling_rate": "300 s",
+        "meter_id": "p"
+      },
+      {
+        "id": 5,
+        "description": "pc of heating gas pump",
+        "sensor_name": "E_gasheating_pump_power",
+        "unit": "W",
+        "sampling_rate": "60 s",
+        "meter_id": "n"
+      },
+      {
+        "id": 6,
+        "description": "pc of water pump of solar thermal collectors",
+        "sensor_name": "E_solarheating_pump_power",
+        "unit": "W",
+        "sampling_rate": "60 s",
+        "meter_id": "n"
+      },
+      {
+        "id": 7,
+        "description": "pc of washing machine",
+        "sensor_name": "E_washing_machine_power",
+        "unit": "W",
+        "sampling_rate": "60 s",
+        "meter_id": "n"
+      },
+      {
+        "id": 8,
+        "description": "environmental data logged by weather station, see Table 3",
+        "sensor_name": "E_weather_*",
+        "unit": "*",
+        "sampling_rate": "1 h",
+        "meter_id": "l"
+      },
+      {
+        "id": 9,
+        "description": "pc of dehumidifier",
+        "sensor_name": "E_dehumidifier_power",
+        "unit": "W",
+        "sampling_rate": "60 s",
+        "meter_id": "n"
+      }
+    ]
+  },
+  "footnotes": [
+    "Meter d was replaced with e on 2018-4-16",
+    "Please refer to Section 4.4 for the meaning of these sensors",
+    "Meter a (Torig= 120 s) removed on the 2017-09-26. Meter g (Torig= 300 s) installed on 2017-11-01"
+  ]
+}

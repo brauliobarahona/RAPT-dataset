@@ -1,0 +1,35 @@
+{
+  "Haus B": {
+    "high-tariff (not on weekends)": {
+      "Start": "07:00",
+      "End": "19:00",
+      "B_total_cons_power": "~0.21",
+      "B_to_net_power": {
+        "Q1/Q4": "~0.13",
+        "Q2/Q3": "~0.07"
+      }
+    },
+    "low-tariff (complete weekend)": {
+      "Start": "19:00",
+      "End": "07:00",
+      "B_total_cons_power": "~0.18",
+      "B_to_net_power": null
+    }
+  },
+  "Haus C": {
+    "high-tariff": {
+      "Start": "07:00",
+      "End": "22:00",
+      "C_total_cons_power": "~0.26",
+      "C_hp_power": "~0.17",
+      "C_to_net_power": "0.08"
+    },
+    "low-tariff": {
+      "Start": "22:00",
+      "End": "07:00",
+      "C_total_cons_power": "~0.16",
+      "C_hp_power": "~0.14",
+      "C_to_net_power": "0.08"
+    }
+  }
+}
